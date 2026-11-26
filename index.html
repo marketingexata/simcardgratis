@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ambil SIMCARD 100% Gratis | JP Smart</title>
+<style>
+:root{--m1:#a0075f;--m2:#d4087f;--m3:#7a0448;--y:#ffd21f;--w:#fff;--ink:#3a0525;--mut:#8a5a76;--ln:#f0d3e3;--err:#e11d48}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0}
+body{font-family:"Trebuchet MS","Segoe UI",system-ui,sans-serif;color:var(--ink);min-height:100vh;background:radial-gradient(ellipse at 50% 60%,var(--m2),var(--m1) 55%,var(--m3));background-attachment:fixed}
+.wrap{max-width:480px;margin:0 auto;padding:16px 16px 190px}
+.top{display:flex;justify-content:space-between;align-items:center}
+.top img{height:38px;background:none;filter:drop-shadow(0 2px 6px rgba(60,0,35,.35))}
+.top span{background:#fff;color:var(--m1);font-weight:800;font-size:11px;border-radius:99px;padding:6px 10px}
+h1{margin:18px 0 6px;text-align:center;color:var(--y);font-size:34px;line-height:1.02;font-weight:900;text-transform:uppercase;text-shadow:0 3px 0 var(--m3),0 6px 14px rgba(0,0,0,.25);animation:pop .7s cubic-bezier(.3,1.6,.5,1)}
+.sub{color:#fff;text-align:center;font-size:14px;line-height:1.45;margin:0 8px 14px}
+.chips{display:flex;gap:8px;justify-content:center;margin-bottom:16px}
+.chip{background:#fff;border-radius:16px;padding:8px 12px;text-align:center;font-size:11px;font-weight:700;color:var(--m1);flex:1}
+.chip b{display:block;font-size:20px;line-height:1.1;color:var(--m3)}
+.chip.y{background:var(--y);color:var(--ink)}
+.prog{display:flex;align-items:center;gap:6px;margin:0 4px 12px}
+.dot{flex:1;height:8px;border-radius:9px;background:rgba(255,255,255,.3);overflow:hidden}
+.dot i{display:block;height:100%;width:0;background:var(--y);transition:width .45s}
+.dot.on i{width:100%}
+.plabel{color:#fff;font-weight:700;font-size:12px;margin-left:4px;white-space:nowrap}
+.card{background:#fff;border-radius:24px;padding:18px 16px;box-shadow:0 14px 34px rgba(60,0,35,.35)}
+.evt{background:#fff4c2;border-radius:14px;padding:10px 12px;font-size:13px;font-weight:700;line-height:1.4;margin-bottom:14px}
+.step{display:none}
+.step.act{display:block;animation:slide .4s ease}
+.step.back.act{animation:slideb .4s ease}
+h2{margin:0 0 12px;font-size:19px;color:var(--m1)}
+.f{margin-bottom:14px;position:relative}
+.f>label,.q{display:block;font-weight:800;font-size:14px;margin-bottom:6px}
+.q em{color:var(--err);font-style:normal}
+.note{font-size:12px;color:var(--mut);margin:-2px 0 6px}
+input[type=text],input[type=tel],input[type=number]{width:100%;font:inherit;font-size:16px;padding:13px 14px;border:2px solid var(--ln);border-radius:14px;background:#fff;color:var(--ink);transition:.2s}
+input:focus{outline:0;border-color:var(--m2);box-shadow:0 0 0 4px rgba(212,8,127,.15)}
+.f.bad input,.f.bad .grp{border-color:var(--err)}
+.f.bad .grp{outline:2px solid var(--err);outline-offset:3px;border-radius:14px}
+.f.bad{animation:shake .4s}
+.err{display:none;color:var(--err);font-size:12px;font-weight:700;margin-top:5px}
+.f.bad .err{display:block}
+.grp{display:grid;gap:8px}
+.opt{display:flex;align-items:center;gap:10px;padding:12px 13px;border:2px solid var(--ln);border-radius:14px;cursor:pointer;font-size:14px;font-weight:600;transition:.2s}
+.opt input{display:none}
+.bx{width:22px;height:22px;border:2px solid #d9a9c2;border-radius:7px;flex:none;display:grid;place-items:center;transition:.2s}
+.opt:active{transform:scale(.97)}
+.opt:has(input:checked){border-color:var(--m2);background:#fff0f8}
+.opt input:checked+.bx{background:var(--m2);border-color:var(--m2)}
+.opt input:checked+.bx::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.row2{grid-template-columns:1fr 1fr}
+.sec{background:linear-gradient(135deg,#fff7d6,#ffe9f4);border-radius:16px;padding:14px;margin-top:6px}
+.sec p{margin:0 0 10px;font-size:13px;line-height:1.45;font-weight:600}
+.dd{position:absolute;left:0;right:0;top:100%;z-index:20;background:#fff;border:2px solid var(--ln);border-radius:14px;max-height:260px;overflow:auto;box-shadow:0 12px 28px rgba(60,0,35,.25);display:none;margin-top:4px}
+.dd.show{display:block}
+.dd h4{margin:0;padding:7px 12px;background:#fdeaf4;color:var(--m1);font-size:12px;position:sticky;top:0}
+.dd div{padding:10px 14px;font-size:15px;cursor:pointer}
+.dd div:hover,.dd div:active{background:#fff0f8}
+.dd p{margin:0;padding:12px;font-size:13px;color:var(--mut)}
+.hide{display:none!important}
+.ex{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.ex figure{margin:0;border:2px dashed #d9a9c2;border-radius:14px;padding:6px;text-align:center;font-size:11px;font-weight:700;background:#fff8fc}
+.ex img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:9px;background:#f3dbe8;display:block;margin-bottom:4px}
+.up{display:block;border:2px dashed var(--m2);border-radius:16px;padding:14px;text-align:center;cursor:pointer;background:#fff8fc;font-weight:700;font-size:14px;color:var(--m1);transition:.2s}
+.up:active{transform:scale(.98)}
+.up input{display:none}
+.up img{width:100%;max-height:170px;object-fit:contain;border-radius:10px;margin-top:8px}
+.up small{display:block;color:var(--mut);font-weight:600;margin-top:2px}
+.ok{background:#e8fbe9;border:2px solid #34c759;border-radius:14px;padding:12px;font-weight:700;font-size:14px;animation:pop .5s}
+.nav{position:fixed;left:0;right:0;bottom:62px;z-index:30;display:flex;gap:10px;max-width:480px;margin:0 auto;padding:0 16px}
+.btn{font:inherit;font-weight:900;font-size:16px;border:0;border-radius:99px;padding:15px 20px;cursor:pointer;transition:.15s;box-shadow:0 6px 0 rgba(60,0,35,.35)}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 rgba(60,0,35,.35)}
+.btn.b{background:#fff;color:var(--m1);flex:0 0 36%}
+.btn.n{background:var(--y);color:var(--ink);flex:1;animation:pulse 2s infinite}
+.btn.n.go{background:linear-gradient(90deg,#ffd21f,#ffae00)}
+#ld,#md{position:fixed;inset:0;z-index:100;background:rgba(58,5,37,.88);display:none;place-items:center;padding:20px}
+#ld.show,#md.show{display:grid}
+.box{background:#fff;border-radius:26px;padding:26px 22px;width:100%;max-width:360px;text-align:center;animation:pop .5s}
+.ring{width:74px;height:74px;margin:0 auto 12px;border-radius:50%;border:8px solid #f6d3e5;border-top-color:var(--m2);animation:spin .9s linear infinite}
+.pct{font-size:34px;font-weight:900;color:var(--m1)}
+.bar{height:12px;border-radius:9px;background:#f6d3e5;overflow:hidden;margin:10px 0}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--m2),var(--y));transition:width .25s}
+.box h3{margin:6px 0;color:var(--m1);font-size:22px}
+.box p{margin:6px 0;font-size:14px;line-height:1.5}
+.jp{color:var(--mut);font-size:13px}
+.big{font-size:56px}
+.tg{position:fixed;left:50%;top:14px;transform:translate(-50%,-90px);background:var(--err);color:#fff;padding:11px 18px;border-radius:99px;font-weight:700;font-size:13px;z-index:120;transition:.35s;max-width:92%;text-align:center}
+.tg.show{transform:translate(-50%,0)}
+@keyframes pop{from{transform:scale(.8);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes slide{from{transform:translateX(30px);opacity:0}to{transform:none;opacity:1}}
+@keyframes slideb{from{transform:translateX(-30px);opacity:0}to{transform:none;opacity:1}}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{50%{transform:scale(1.03)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><img src="https://marketingexata.github.io/simcardgratis/logojps2.png" alt="JP Smart SIM"><span>Hanya 200 orang pertama</span></div>
+  <h1>Ambil SIMCARD 100% Gratis</h1>
+  <p class="sub">Kartu siap pakai dengan kuota 50GB tiap bulan dan gratis internetan selama 2 bulan (tanpa tagihan internet selama 2 bulan).</p>
+  <div class="chips"><div class="chip y"><b>2 BULAN</b>gratis internet</div><div class="chip"><b>50GB</b>kuota per bulan</div><div class="chip"><b>Rp0</b>tanpa tagihan</div></div>
+  <div class="prog" id="prog"></div>
+  <div class="card">
+    <div class="evt">Pastikan kamu bisa hadir di acara Indonesia Friendship Festival 2026 di Odaiba, Tokyo, Japan untuk mengambil kartu SIM card gratismu.</div>
+
+    <section class="step" data-s="0">
+      <h2>Kenalan dulu yuk 👋</h2>
+      <div class="f" data-f="nama"><label>Nama Lengkap <em>*</em></label><input type="text" data-k="nama" autocomplete="name" placeholder="Contoh: Siti Aminah"><div class="err"></div></div>
+      <div class="f" data-f="wa"><label>WhatsApp aktif <em>*</em></label><input type="tel" data-k="wa" inputmode="tel" placeholder="Contoh: 08012345678"><div class="err"></div></div>
+    </section>
+
+    <section class="step" data-s="1">
+      <h2>Sosmed dan domisili kamu</h2>
+      <div class="f" data-f="ig"><label>Username Instagram <em>*</em></label><input type="text" data-k="ig" autocapitalize="none" placeholder="@username"><div class="err"></div></div>
+      <div class="f" data-f="tt"><label>Username TikTok <em>*</em></label><input type="text" data-k="tt" autocapitalize="none" placeholder="@username"><div class="err"></div></div>
+      <div class="f" data-f="domisili"><label>Domisili di Jepang saat ini</label><p class="note">Ketik atau pilih dari daftar</p><input type="text" id="dom" data-k="domisili" autocomplete="off" placeholder="Contoh: Tokyo"><div class="dd" id="dd"></div></div>
+      <div class="f" data-f="sumber"><span class="q">Dari mana kamu mengetahui campaign ini? <em>*</em></span><div class="grp" data-g="sumber"></div><div class="err"></div></div>
+      <div class="f" data-f="pembagi"><label>Apa nama akun atau nomor WhatsApp yang membagikan informasi campaign ini? <em>*</em></label><input type="text" data-k="pembagi" placeholder="Nama akun / nomor WhatsApp"><div class="err"></div></div>
+      <div class="sec"><p>Kita juga sedang mencari afiliator untuk membantu campaign ini, &amp; barangkali kamu berminat untuk dapat penghasilan tambahan. 💰</p>
+        <div class="f" data-f="afiliator" style="margin:0"><span class="q">Apakah kamu tertarik untuk menjadi afiliator? <em>*</em></span><div class="grp row2" data-g="afiliator"></div><div class="err"></div></div>
+      </div>
+    </section>
+
+    <section class="step" data-s="2">
+      <h2>Konfirmasi hadir di event</h2>
+      <div class="f" data-f="hadir"><span class="q">Bisa hadir ke acara festival? <em>*</em></span><div class="grp row2" data-g="hadir"></div><div class="err"></div></div>
+      <div data-show="hadir=Ya">
+        <div class="f" data-f="tanggal"><span class="q">Pada tanggal berapa? <em>*</em></span><div class="grp" data-g="tanggal"></div><div class="err"></div></div>
+        <div class="f" data-f="jam"><span class="q">Perkiraan jam datang <em>*</em></span><div class="grp" data-g="jam"></div><div class="err"></div></div>
+        <div class="f" data-f="datang"><span class="q">Apakah kamu hadir ke acara ini sendiri atau dengan teman? <em>*</em></span><div class="grp row2" data-g="datang"></div><div class="err"></div></div>
+        <div class="f" data-f="teman" data-show="datang=Dengan teman"><label>Berapa jumlah teman yang ikut? <em>*</em></label><p class="note">Jumlah teman tidak termasuk kamu sebagai pengisi formulir.</p><input type="number" data-k="teman" inputmode="numeric" min="1" max="20" placeholder="Contoh: 2"><div class="err"></div></div>
+      </div>
+    </section>
+
+    <section class="step" data-s="3">
+      <h2>Aktivasi kartu gratismu</h2>
+      <div data-show="hadir=Ya">
+        <div class="f" data-f="aktivasi"><span class="q">Kartu SIM gratismu mau diaktivasi sekarang secara mandiri atau melalui admin? <em>*</em></span><div class="grp" data-g="aktivasi"></div><div class="err"></div></div>
+        <div data-show="aktivasi=Aktivasi sekarang secara mandiri">
+          <div class="f" data-f="email"><label>Email aktif <em>*</em></label><input type="text" data-k="email" inputmode="email" autocapitalize="none" autocomplete="email" placeholder="Contoh: nama@gmail.com"><div class="err"></div></div>
+          <p class="note" style="margin-bottom:8px">Contoh foto yang benar (jelas, tidak buram, tidak terpotong):</p>
+          <div class="ex"><figure><img id="exz" alt="Contoh Zairyu Card">Contoh Zairyu Card / KTP Jepang</figure><figure><img id="exp" alt="Contoh Paspor">Contoh Paspor</figure></div>
+          <div class="f" data-f="zairyu"><span class="q">Upload Zairyu Card / KTP Jepang <em>*</em></span><label class="up"><input type="file" accept="image/*" data-up="zairyu"><span>📷 Pilih foto<small>JPG / PNG</small></span><img class="hide" id="pv-zairyu" alt=""></label><div class="err"></div></div>
+          <div class="f" data-f="paspor"><span class="q">Upload Paspor <em>*</em></span><label class="up"><input type="file" accept="image/*" data-up="paspor"><span>📷 Pilih foto<small>Halaman data diri</small></span><img class="hide" id="pv-paspor" alt=""></label><div class="err"></div></div>
+        </div>
+        <div class="ok" data-show="aktivasi=Aktivasi melalui admin">Oke, setelah ini admin JP Smart bakal hubungi Kamu melalui WhatsApp 💬</div>
+      </div>
+      <div class="ok" data-show="hadir=Tidak">Semua data sudah lengkap. Tekan tombol di bawah untuk mengirim 🎉</div>
+    </section>
+  </div>
+</div>
+
+<div class="nav"><button class="btn b" id="bk">← Kembali</button><button class="btn n" id="nx">Berikutnya →</button></div>
+<div class="tg" id="tg"></div>
+
+<div id="ld"><div class="box"><div class="ring"></div><div class="pct" id="lp">0%</div><div class="bar"><i id="lb"></i></div><p id="lt">Memuat...</p></div></div>
+
+<div id="md"><div class="box"><div class="big">🎉</div><h3>Terima kasih!</h3>
+  <p>Data kamu sudah kami terima. Sampai jumpa di Indonesia Friendship Festival 2026, Odaiba!</p>
+  <p class="jp">ありがとうございます！データを受け取りました。インドネシア・日本友好フェスティバル2026でお会いしましょう！</p>
+  <button class="btn n" id="dl" style="width:100%;margin-top:10px">⬇ Download bukti pengisian</button>
+  <button class="btn b" id="cl" style="width:100%;margin-top:12px">Selesai</button></div></div>
+
+<script>
+/* ===== PENGATURAN: isi 3 link ini ===== */
+const CFG={
+  SCRIPT_URL:"https://script.google.com/macros/s/AKfycbx9T0z-JCBiJVaO9QCYRpHzvXF2AS8mfgZ1bW3f2iUWYvmhBLC50600KRJ5eImcXiqC/exec",                 // URL Web App Apps Script (…/exec)
+  IMG_ZAIRYU:"https://marketingexata.github.io/simcardgratis/contoh2.jpg",                 // link gambar contoh Zairyu Card / KTP Jepang
+  IMG_PASPOR:"https://marketingexata.github.io/simcardgratis/contoh1.jpg"                  // link gambar contoh Paspor
+};
+const OPTS={
+ sumber:["Instagram","TikTok","Facebook","Story WhatsApp","Chat WhatsApp"],
+ afiliator:["Ya","Tidak"],hadir:["Ya","Tidak"],
+ tanggal:["Sabtu, 12 Desember 2026","Minggu, 13 Desember 2026","Kedua hari (12 & 13 Desember 2026)"],
+ jam:["Jam 10 sampai jam 12 pagi (waktu Jepang)","Jam 1 sampai jam 2 siang (waktu Jepang)","Jam 2 sampai jam 4 sore (waktu Jepang)","Jam 4 sampai jam 6 sore (waktu Jepang)","Jam 6 sore sampai acara selesai"],
+ datang:["Sendiri","Dengan teman"],
+ aktivasi:["Aktivasi sekarang secara mandiri","Aktivasi melalui admin"]
+};
+const PREF=[
+["Kanto (Tokyo & sekitarnya)",["Tokyo","Kanagawa","Saitama","Chiba","Ibaraki","Tochigi","Gunma"]],
+["Hokkaido",["Hokkaido"]],
+["Tohoku",["Aomori","Iwate","Miyagi","Akita","Yamagata","Fukushima"]],
+["Chubu",["Niigata","Toyama","Ishikawa","Fukui","Yamanashi","Nagano","Gifu","Shizuoka","Aichi"]],
+["Kansai",["Mie","Shiga","Kyoto","Osaka","Hyogo","Nara","Wakayama"]],
+["Chugoku",["Tottori","Shimane","Okayama","Hiroshima","Yamaguchi"]],
+["Shikoku",["Tokushima","Kagawa","Ehime","Kochi"]],
+["Kyushu & Okinawa",["Fukuoka","Saga","Nagasaki","Kumamoto","Oita","Miyazaki","Kagoshima","Okinawa"]]];
+const LBL={nama:"Nama Lengkap",wa:"WhatsApp",ig:"Instagram",tt:"TikTok",domisili:"Domisili",sumber:"Tahu campaign dari",pembagi:"Akun/nomor pembagi info",afiliator:"Tertarik jadi afiliator",hadir:"Hadir di festival",tanggal:"Tanggal hadir",jam:"Perkiraan jam",datang:"Hadir dengan",teman:"Jumlah teman",email:"Email aktif",aktivasi:"Aktivasi SIM"};
+const KEY="jps_form_v1";
+let S={step:0,d:{}};
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+
+/* penyimpanan gambar (IndexedDB) */
+const idb=new Promise(r=>{try{const q=indexedDB.open("jps",1);q.onupgradeneeded=()=>q.result.createObjectStore("f");q.onsuccess=()=>r(q.result);q.onerror=()=>r(null)}catch(e){r(null)}});
+const idbSet=async(k,v)=>{const d=await idb;if(d)d.transaction("f","readwrite").objectStore("f").put(v,k)};
+const idbDel=async k=>{const d=await idb;if(d)d.transaction("f","readwrite").objectStore("f").delete(k)};
+const idbGet=async k=>{const d=await idb;if(!d)return;return new Promise(r=>{const q=d.transaction("f").objectStore("f").get(k);q.onsuccess=()=>r(q.result);q.onerror=()=>r()})};
+const IMG={};
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+
+/* tampilan */
+$$("[data-g]").forEach(g=>{const n=g.dataset.g;g.innerHTML=OPTS[n].map(v=>`<label class="opt"><input type="radio" name="${n}" value="${v}" data-k="${n}"><span class="bx"></span><span>${v}</span></label>`).join("")});
+$("#prog").innerHTML=[0,1,2,3].map(()=>'<div class="dot"><i></i></div>').join("")+'<span class="plabel" id="pl"></span>';
+if(CFG.IMG_ZAIRYU)$("#exz").src=CFG.IMG_ZAIRYU;if(CFG.IMG_PASPOR)$("#exp").src=CFG.IMG_PASPOR;
+
+function toast(m){const t=$("#tg");t.textContent=m;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),2600)}
+function loader(on,txt,p){$("#ld").classList.toggle("show",on);if(txt)$("#lt").textContent=txt;if(p!=null){p=Math.round(p);$("#lp").textContent=p+"%";$("#lb").style.width=p+"%"}}
+function refresh(){$$("[data-show]").forEach(e=>{const[k,v]=e.dataset.show.split("=");e.classList.toggle("hide",S.d[k]!==v)})}
+function render(back){
+ $$(".step").forEach(s=>{const a=+s.dataset.s===S.step;s.classList.toggle("act",a);s.classList.toggle("back",!!back)});
+ $$(".dot").forEach((d,i)=>d.classList.toggle("on",i<=S.step));
+ $("#pl").textContent=(S.step+1)+"/4";
+ $("#bk").style.visibility=S.step?"visible":"hidden";
+ const n=$("#nx");n.textContent=S.step===3?"AMBIL SIM CARD GRATIS 🎁":"Berikutnya →";n.classList.toggle("go",S.step===3);
+ refresh();scrollTo({top:0,behavior:"smooth"});save();
+}
+
+/* input */
+document.addEventListener("input",e=>{const k=e.target.dataset.k;if(!k)return;S.d[k]=e.target.value;e.target.closest(".f")?.classList.remove("bad");refresh();save()});
+document.addEventListener("change",e=>{const k=e.target.dataset.k;if(k&&e.target.type==="radio"){S.d[k]=e.target.value;e.target.closest(".f")?.classList.remove("bad");refresh();save()}});
+
+/* dropdown prefektur */
+const dom=$("#dom"),dd=$("#dd");
+function ddRender(){
+ const q=dom.value.trim().toLowerCase();let h="",c=0;
+ PREF.forEach(([g,l])=>{const m=l.filter(x=>!q||x.toLowerCase().includes(q)||g.toLowerCase().includes(q));if(m.length){h+=`<h4>${g}</h4>`+m.map(x=>`<div data-v="${x}">${x}</div>`).join("");c+=m.length}});
+ dd.innerHTML=c?h:'<p>Tidak ada di daftar. Tekan lanjut untuk memakai tulisanmu.</p>';dd.classList.add("show")}
+dom.addEventListener("focus",ddRender);dom.addEventListener("input",ddRender);
+dd.addEventListener("mousedown",e=>e.preventDefault());
+dd.addEventListener("click",e=>{const v=e.target.dataset.v;if(v){dom.value=v;S.d.domisili=v;save();dd.classList.remove("show")}});
+document.addEventListener("click",e=>{if(!e.target.closest("[data-f=domisili]"))dd.classList.remove("show")});
+
+/* upload foto */
+$$("[data-up]").forEach(inp=>inp.addEventListener("change",()=>{
+ const f=inp.files[0],k=inp.dataset.up;if(!f)return;
+ const r=new FileReader();loader(true,"Mengunggah foto...",0);
+ r.onprogress=e=>e.lengthComputable&&loader(true,"Mengunggah foto...",e.loaded/e.total*60);
+ r.onerror=()=>{loader(false);toast("Foto gagal dibaca, coba lagi")};
+ r.onload=()=>{const im=new Image();im.onload=()=>{
+  loader(true,"Merapikan foto...",80);
+  const s=Math.min(1,1400/Math.max(im.width,im.height)),c=document.createElement("canvas");
+  c.width=im.width*s;c.height=im.height*s;c.getContext("2d").drawImage(im,0,0,c.width,c.height);
+  const u=c.toDataURL("image/jpeg",.82);IMG[k]=u;idbSet(k,u);showPv(k,u);
+  loader(true,"Selesai!",100);setTimeout(()=>loader(false),350);$(`[data-f=${k}]`).classList.remove("bad")};
+  im.onerror=()=>{loader(false);toast("File harus berupa gambar")};im.src=r.result};
+ r.readAsDataURL(f)}));
+function showPv(k,u){const p=$("#pv-"+k);p.src=u;p.classList.remove("hide");p.previousElementSibling.innerHTML="✅ Foto terpilih<small>Ketuk untuk ganti</small>"}
+
+/* validasi */
+function check(step){
+ const d=S.d,bad=(f,m)=>({f,m}),v=k=>(d[k]||"").toString().trim(),hadir=d.hadir==="Ya";
+ if(step===0){
+  if(v("nama").length<3)return bad("nama","Isi nama lengkapmu ya");
+  if(!/^\+?[0-9\s-]{9,16}$/.test(v("wa")))return bad("wa","Nomor WhatsApp belum benar (9-16 angka)");}
+ if(step===1){
+  if(v("ig").replace("@","").length<2)return bad("ig","Isi username Instagram");
+  if(v("tt").replace("@","").length<2)return bad("tt","Isi username TikTok");
+  if(!d.sumber)return bad("sumber","Pilih salah satu");
+  if(v("pembagi").length<2)return bad("pembagi","Isi akun atau nomor WhatsApp pembagi info");
+  if(!d.afiliator)return bad("afiliator","Pilih ya atau tidak");}
+ if(step===2){
+  if(!d.hadir)return bad("hadir","Pilih ya atau tidak");
+  if(hadir){
+   if(!d.tanggal)return bad("tanggal","Pilih tanggal");
+   if(!d.jam)return bad("jam","Pilih perkiraan jam");
+   if(!d.datang)return bad("datang","Pilih salah satu");
+   if(d.datang==="Dengan teman"&&!(+d.teman>=1))return bad("teman","Isi jumlah teman (minimal 1)");}}
+ if(step===3&&hadir){
+  if(!d.aktivasi)return bad("aktivasi","Pilih cara aktivasi");
+  if(d.aktivasi.includes("mandiri")){
+   if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v("email")))return bad("email","Email belum benar, contoh: nama@gmail.com");
+   if(!IMG.zairyu)return bad("zairyu","Upload Zairyu Card / KTP Jepang");
+   if(!IMG.paspor)return bad("paspor","Upload paspor");}}
+ return null}
+function fail(e,step){
+ if(step!==S.step){S.step=step;render(true)}
+ const f=$(`[data-f=${e.f}]`);f.classList.add("bad");$(".err",f).textContent=e.m;toast(e.m);
+ setTimeout(()=>f.scrollIntoView({behavior:"smooth",block:"center"}),150)}
+
+$("#bk").onclick=()=>{if(S.step){S.step--;render(true)}};
+$("#nx").onclick=()=>{
+ const e=check(S.step);if(e)return fail(e,S.step);
+ if(S.step<3){S.step++;render();return}
+ for(let i=0;i<4;i++){const x=check(i);if(x)return fail(x,i)}
+ submit()};
+
+/* kirim */
+function payload(){
+ const d={...S.d};
+ if(d.hadir!=="Ya")["tanggal","jam","datang","teman","aktivasi"].forEach(k=>delete d[k]);
+ if(d.datang!=="Dengan teman")delete d.teman;
+ if(!(d.aktivasi&&d.aktivasi.includes("mandiri")))delete d.email;
+ d.waktuKirim=new Date().toISOString();
+ if(d.aktivasi&&d.aktivasi.includes("mandiri")){d.zairyu=IMG.zairyu;d.paspor=IMG.paspor}
+ return d}
+let SENT=null;
+function submit(){
+ const p=payload();SENT=p;loader(true,"Mengirim data...",0);
+ const done=()=>{loader(true,"Berhasil!",100);setTimeout(()=>{loader(false);$("#md").classList.add("show")},500)};
+ if(!CFG.SCRIPT_URL){let n=0;const t=setInterval(()=>{n+=8;loader(true,"Mengirim data (mode uji)...",Math.min(n,100));if(n>=100){clearInterval(t);done()}},120);return}
+ let n=0;const tk=setInterval(()=>{n+=(92-n)*.06;loader(true,"Mengirim data...",n)},200);
+ fetch(CFG.SCRIPT_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(p)})
+  .then(r=>r.json()).then(j=>{clearInterval(tk);j.ok?done():(loader(false),toast("Gagal menyimpan. Coba kirim lagi, datamu aman"))})
+  .catch(()=>{clearInterval(tk);loader(false);toast("Koneksi bermasalah. Coba kirim lagi, datamu aman")})}
+
+/* bukti JPEG */
+$("#dl").onclick=()=>{
+ const d=SENT||{},rows=Object.keys(LBL).filter(k=>d[k]).map(k=>[LBL[k],d[k]]);
+ const W=900,H=330+rows.length*84,c=document.createElement("canvas");c.width=W;c.height=H;const x=c.getContext("2d");
+ const g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,"#d4087f");g.addColorStop(1,"#7a0448");x.fillStyle=g;x.fillRect(0,0,W,H);
+ x.fillStyle="#ffd21f";x.font="900 54px sans-serif";x.textAlign="center";x.fillText("BUKTI PENGISIAN FORM",W/2,95);
+ x.fillStyle="#fff";x.font="28px sans-serif";x.fillText("Ambil SIMCARD 100% Gratis · JP Smart",W/2,145);
+ x.fillStyle="#fff";x.beginPath();x.roundRect(40,185,W-80,H-225,28);x.fill();
+ x.textAlign="left";rows.forEach(([l,v],i)=>{const y=250+i*84;x.fillStyle="#8a5a76";x.font="24px sans-serif";x.fillText(l,75,y);x.fillStyle="#3a0525";x.font="bold 30px sans-serif";x.fillText(String(v).slice(0,44),75,y+38)});
+ x.fillStyle="#fff";x.textAlign="center";x.font="22px sans-serif";x.fillText("Dikirim: "+new Date(d.waktuKirim).toLocaleString("id-ID"),W/2,H-22);
+ c.toBlob(b=>{const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="bukti-jp-smart.jpg";a.click()},"image/jpeg",.92)};
+
+/* selesai: kosongkan dan muat ulang */
+$("#cl").onclick=async()=>{localStorage.removeItem(KEY);await idbDel("zairyu");await idbDel("paspor");location.reload()};
+
+/* pulihkan isian */
+(async()=>{
+ try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&s.d)S=s}catch(e){}
+ $$("[data-k]").forEach(i=>{const v=S.d[i.dataset.k];if(v==null)return;i.type==="radio"?i.checked=i.value===v:i.value=v});
+ for(const k of["zairyu","paspor"]){const u=await idbGet(k);if(u){IMG[k]=u;showPv(k,u)}}
+ render()})();
+</script>
+</body>
+</html>
